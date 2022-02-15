@@ -33,8 +33,9 @@ goto end
 md Private
 echo Private created successfully
 cls
-echo your password is 1855. ask trey if you want to change it
+echo your password is 1855. modify the code by right clicking and opening with notepad if you want to change it
 pause
 start %SystemRoot%\explorer.exe "C:\treyapps\filelock\private"
 goto End
 :End
+::enter commands here for when the app closes
