@@ -5,4 +5,3 @@ echo this tool shows where the app is installed. (it should be in C:\treyapps\fi
 echo this installation is located in
 echo %~dp0
 pause
-uninstall.bat
