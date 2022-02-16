@@ -56,3 +56,6 @@ start %SystemRoot%\explorer.exe "C:\treyapps\filelock\private"
 goto End
 :End
 ::enter custom commands here for when the app closes
+cls
+echo Good bye!
+pause
