@@ -1,7 +1,25 @@
 @echo off
+:CONFIRM
+echo Are you updating? (Y/N)
+set/p "cho=>"
+if %cho%==Y goto UPDATE
+if %cho%==y goto UPDATE
+if %cho%==n goto INSTALL
+if %cho%==N goto INSTALL
+echo Invalid choice.
+goto CONFIRM
+:INSTALL
 md C:\treyapps\filelock
 copy *.* C:\treyapps\filelock
-md %appdata%"\Microsoft\Windows\Start Menu\Programs\treyapps\filelock\"
-@echo on
-copy "C:\treyapps\filelock\uninstall file safe.lnk" %appdata%"\Microsoft\Windows\Start Menu\Programs\treyapps\filelock\uninstall file safe.lnk"
-copy "C:\treyapps\filelock\File safe.lnk" %appdata%"\Microsoft\Windows\Start Menu\Programs\treyapps\filelock\File safe.lnk"
+goto END
+:UPDATE
+cls
+echo delete all non folders
+pause
+start explorer.exe "C:\treyapps\filelock" 
+cls
+echo press any key to start installing.
+echo your password will be reset to the default. make sure to set them if you want a custom one.
+copy *.* C:\treyapps\filelock
+goto END
+:END
