@@ -28,10 +28,16 @@ echo What do you want to do?
 echo 1) Open folder
 echo 2) Change password
 echo 3) Lock the folder
+echo 4) Submit a bug
+echo 5) Submit a feature request
+echo 6) Submit feedback
 set/p "cho=choose>"
 if %cho%==1 goto openfolder
 if %cho%==2 goto changepass
 if %cho%==3 goto LOCK
+if %cho%==4 start https://github.com/trey7658/File-lock/issues/new?labels=bug&template=bug_report.md
+if %cho%==5 start https://github.com/trey7658/File-lock/issues/new?labels=enhancement&template=feature_request.md
+if %cho%==6 start https://github.com/trey7658/File-lock/issues/new
 echo Invalid choice.
 goto Unlocked
 :openfolder
