@@ -18,7 +18,6 @@ echo delete all non folders
 pause
 start explorer.exe "C:\treyapps\filelock" 
 cls
-
 echo press any key to start installing.
 echo your password will be reset to the default. make sure to set them if you want a custom one.
 pause
